@@ -2,18 +2,21 @@ import React from 'react'
 import { CgProfile } from "react-icons/cg";
 import { Link } from 'react-router-dom';
 
+
+
 const Login = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="w-[400px] bg-white border border-gray-300 shadow-lg rounded-xl p-6">
-        
-        {/* Profile Icon */}
-        <div className="mb-6 flex justify-center text-gray-600">
-          <CgProfile size={60} />
+    <div className='form-container flex justify-center items-center min-h-screen bg-gray-200'>
+      <div className='form w-[400px]  p-4 bg-gray-100 rounded-md shadow-2xl flex flex-col justify-center'>
+
+
+        {/* profile icon */}
+        <div className='mb-3 flex justify-center'>
+          <CgProfile size={50} />
         </div>
 
-        {/* Email input */}
-        <div className="mb-4 flex justify-center">
+
+        <div className="mb-3 flex justify-center">
           <input
             type="email"
             placeholder="Enter email"
@@ -21,8 +24,7 @@ const Login = () => {
           />
         </div>
 
-        {/* Password input */}
-        <div className="mb-6 flex justify-center">
+        <div className="mb-3 flex justify-center">
           <input
             type="password"
             placeholder="Enter password"
@@ -30,24 +32,20 @@ const Login = () => {
           />
         </div>
 
-        {/* Login Button */}
-        <div className="flex justify-center">
-          <button
-            type="submit"
-            className="w-[80%] bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
-          >
-            Log in
-          </button>
+        <div className="mb-3 flex justify-center">
+          <button type="submit" className='login-btn bg-blue-500 w-20 p-2 text-white rounded-xl items-center' > Log in</button>
         </div>
 
-        {/* Bottom Text */}
-        <p className="text-center text-sm mt-4">
-          Not a user? 
-          <Link to="/register" className="text-blue-600 hover:underline ml-1">
-            Register
-          </Link>
-        </p>
+
+        <div className='form-bottom'>
+          <p className='text-center'>
+            not a user? please
+            <Link to="/register" className='login-btn text-orange-600'> Register </Link>
+          </p>
+        </div>
+
       </div>
+
     </div>
   )
 }
