@@ -1,9 +1,14 @@
 import React from 'react'
+import Navbar from '../../components/Layout/Navbar';
 
 const TodoList = () => {
   return (
-    <div>TodoList</div>
+    <>
+      <Navbar/>
+      <h1> Todos List</h1>
+    </>
   )
 }
 
-export default TodoList
+
+export default TodoList;
